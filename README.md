@@ -68,15 +68,6 @@ pnpm install
 pnpm run dev
 ```
 
-## Main Features
-
-- Mobile debugging
-- Simulator
-- JSB debugging
-- Network request inspection
-- Performance analysis
-- Element inspection
-
 ## Tech Stack
 
 - Electron

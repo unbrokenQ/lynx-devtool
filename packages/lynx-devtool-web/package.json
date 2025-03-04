@@ -1,6 +1,6 @@
 {
   "name": "@lynx-dev/lynx-devtool-web",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-beta.2",
   "scripts": {
     "reset": "npx rimraf ./**/node_modules",
     "setup": "pnpm run reset && pnpm install",

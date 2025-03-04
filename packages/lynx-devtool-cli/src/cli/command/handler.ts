@@ -7,7 +7,7 @@ import { FileType, FileTypes, FileSuffixs, DEFAULT_STATIC_SERVE_PORT } from '../
 import fs from 'fs-extra';
 import execa from 'execa';
 import { defaultLogger, getConfigItem, setConfigItem } from '../../utils';
-import { DebugRouterConnector } from '@lynx-dev/debug-router-connector';
+import { DebugRouterConnector } from '@lynx-js/debug-router-connector';
 import { EnvLogManager } from '../../utils/envLogManager';
 import feEnvLogHandler from '../utils/feEnvLogHandler';
 import { app } from 'electron';

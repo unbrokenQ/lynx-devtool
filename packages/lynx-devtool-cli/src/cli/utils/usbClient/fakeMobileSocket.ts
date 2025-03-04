@@ -6,7 +6,7 @@ import {
   ERemoteDebugDriverExternalEvent,
   IRemoteDebugServer4Driver,
   RemoteDebugDriver
-} from '@lynx-dev/remote-debug-driver';
+} from '@lynx-js/remote-debug-driver';
 import fs from 'fs-extra';
 import fetch from 'node-fetch';
 import path from 'path';

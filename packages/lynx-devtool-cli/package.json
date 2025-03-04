@@ -1,6 +1,6 @@
 {
   "name": "@lynx-dev/lynx-devtool-cli",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-beta.2",
   "description": "Lynx DevTool toolkit",
   "license": "Apache-2.0",
   "main": "./dist/lib/index.js",
@@ -24,7 +24,7 @@
     "unzipResources": "bash scripts/unzip-resources.sh"
   },
   "dependencies": {
-    "@lynx-dev/debug-router-connector": "0.0.2",
+    "@lynx-js/debug-router-connector": "0.0.2",
     "@lynx-dev/lynx-devtool-utils": "workspace:*",
     "asar": "^3.2.0",
     "async": "3.2.4",

@@ -2,9 +2,9 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { DebugRouterConnector, SocketEvent } from '@lynx-dev/debug-router-connector';
+import { DebugRouterConnector, SocketEvent } from '@lynx-js/debug-router-connector';
 import FakeMobileSocket, { ClientType } from '../utils/usbClient/fakeMobileSocket';
-import { ERemoteDebugDriverExternalEvent } from '@lynx-dev/remote-debug-driver';
+import { ERemoteDebugDriverExternalEvent } from '@lynx-js/remote-debug-driver';
 import { defaultLogger } from '../../utils';
 import { MessageCallback } from './MessageCallback';
 

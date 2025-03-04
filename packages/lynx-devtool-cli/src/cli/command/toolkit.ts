@@ -2,7 +2,7 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { DebugRouterConnector, UsbClient, getDriverReportService } from '@lynx-dev/debug-router-connector';
+import { DebugRouterConnector, UsbClient, getDriverReportService } from '@lynx-js/debug-router-connector';
 import axios, { AxiosResponse } from 'axios';
 import { CliOptions, DEFAULT_ROOM_ID } from '../../config';
 import { EnvLogManager, defaultLogger } from '../../utils';

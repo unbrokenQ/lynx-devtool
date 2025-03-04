@@ -7,7 +7,7 @@ import {
   ERemoteDebugDriverExternalEvent,
   ICustomDataWrapper,
   IRemoteDebugServer4Driver
-} from '@lynx-dev/remote-debug-driver';
+} from '@lynx-js/remote-debug-driver';
 import { ICDPMessageDispatcher } from '../types';
 
 class CDPMessageDispatcher implements ICDPMessageDispatcher {

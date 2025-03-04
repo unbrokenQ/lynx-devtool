@@ -4,7 +4,7 @@
 
 /* eslint-disable max-lines-per-function */
 import React, { useRef, useCallback, useEffect, useState } from 'react';
-import { createCustomData, ECustomDataType, ICustomDataWrapper } from '@lynx-dev/remote-debug-driver';
+import { createCustomData, ECustomDataType, ICustomDataWrapper } from '@lynx-js/remote-debug-driver';
 import { IDeviceInfo, InspectorType } from '@/types';
 import { devtoolActionHandler, getCdpMessageDispatcher, getPluginDriver, getRemoteDebugDriver } from '../../services';
 import { useTranslation } from 'react-i18next';

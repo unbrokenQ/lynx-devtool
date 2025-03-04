@@ -6,7 +6,7 @@ import {
   ECustomDataType,
   ICustomDataWrapper,
   IRemoteDebugServer4Driver
-} from '@lynx-dev/remote-debug-driver';
+} from '@lynx-js/remote-debug-driver';
 
 export interface ISessionInfo {
   url: string;

@@ -2,7 +2,7 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { IRemoteDebugServer4Driver, createRemoteDebugDriver } from '@lynx-dev/remote-debug-driver';
+import { IRemoteDebugServer4Driver, createRemoteDebugDriver } from '@lynx-js/remote-debug-driver';
 import { getCdpMessageDispatcher } from './batcher';
 
 let debugDriverInstance: IRemoteDebugServer4Driver | null = null;

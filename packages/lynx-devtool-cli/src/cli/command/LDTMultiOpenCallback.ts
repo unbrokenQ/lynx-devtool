@@ -6,7 +6,7 @@ import { defaultLogger } from '../../utils';
 import {
   MultiOpenCallback,
   MultiOpenStatus
-} from '@lynx-dev/debug-router-connector';
+} from '@lynx-js/debug-router-connector';
 import { LDTCLIClient } from './LDTDriverClient';
 
 export class LDTMultiOpenCallback implements MultiOpenCallback {

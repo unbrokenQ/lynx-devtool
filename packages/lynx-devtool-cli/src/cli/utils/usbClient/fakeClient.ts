@@ -2,8 +2,8 @@
 // Licensed under the Apache License Version 2.0 that can be found in the
 // LICENSE file in the root directory of this source tree.
 
-import { DebugRouterConnector, UsbClient } from '@lynx-dev/debug-router-connector';
-import { ERemoteDebugDriverExternalEvent } from '@lynx-dev/remote-debug-driver';
+import { DebugRouterConnector, UsbClient } from '@lynx-js/debug-router-connector';
+import { ERemoteDebugDriverExternalEvent } from '@lynx-js/remote-debug-driver';
 import FakeMobileSocket, { ClientType } from './fakeMobileSocket';
 
 const usbToFakeSocket: Map<number, FakeMobileSocket> = new Map();

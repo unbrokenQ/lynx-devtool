@@ -2,7 +2,7 @@
   "name": "lynx-devtool",
   "productName": "Lynx DevTool",
   "version": "0.0.1-beta.3",
-  "description": "Lynx Devtool",
+  "description": "Lynx DevTool",
   "main": "dist/index.js",
   "scripts": {
     "build": "rsbuild build && cp preload.js dist/",

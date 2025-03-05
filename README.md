@@ -1,4 +1,4 @@
-# Lynx Devtool
+# Lynx DevTool
 
 An Electron-based developer tool for Lynx, providing mobile debugging features.
 

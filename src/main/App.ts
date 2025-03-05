@@ -188,7 +188,7 @@ class App {
 
       app.setAboutPanelOptions({
         iconPath: iconPath,
-        applicationName: 'Lynx Devtool',
+        applicationName: 'Lynx DevTool',
         applicationVersion: `${version}`,
         copyright: 'Copyright 2024 The Lynx Authors.\nAll rights reserved.'
       });

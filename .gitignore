@@ -54,7 +54,7 @@ log/
 .gclient_entries
 .gclient_previous_sync_commits
 
-# Ignore Chrome Devtools output
+# Ignore Chrome DevTools output
 devtool.frontend.lynx_1.0.*.tar.gz
 devtool.frontend.web_1.0.*.tar.gz
 

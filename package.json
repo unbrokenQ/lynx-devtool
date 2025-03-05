@@ -1,7 +1,7 @@
 {
   "name": "lynx-devtool",
   "productName": "Lynx DevTool",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1-beta.3",
   "description": "Lynx Devtool",
   "main": "dist/index.js",
   "scripts": {

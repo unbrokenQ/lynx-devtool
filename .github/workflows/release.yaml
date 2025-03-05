@@ -93,9 +93,8 @@ jobs:
       - name: Fetch depot_tools
         run: pnpm run fetch:depot_tools
 
-      - name: Alias Python
-        run: |
-          alias python=python3
+      - name: ln Python
+        run: ln -s `which python3` /usr/local/bin/python
 
       - name: Sync devtools-gn
         run: |

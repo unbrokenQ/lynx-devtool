@@ -12,13 +12,13 @@ import { FileType } from '@/types';
 
 export async function renameLocalFile(oldName: string, newName: string) {
   return await axios.get(
-    `/renameLocalFile?oldName=${oldName}&newName=${newName}` // ignore_security_alert
+    `/renameLocalFile?oldName=${encodeURIComponent(oldName)}&newName=${encodeURIComponent(newName)}` // ignore_security_alert
   );
 }
 
 export async function deleteLocalFile(fileName: string) {
   return await axios.get(
-    `/deleteLocalFile?fileName=${fileName}` // ignore_security_alert
+    `/deleteLocalFile?fileName=${encodeURIComponent(fileName)}` // ignore_security_alert
   );
 }
 
@@ -49,12 +49,12 @@ export async function checkExistServer() {
 }
 
 export async function openUrlExternal(url: string) {
-  return await axios.get(`/openUrlExternal?url=${url}`); // ignore_security_alert
+  return await axios.get(`/openUrlExternal?url=${encodeURIComponent(url)}`); // ignore_security_alert
 }
 
 // Get the intranet ip
 export async function queryIntranetIp(lan = false) {
-  return await axios.get(`/queryIntranetIp?lan=${lan}`); // ignore_security_alert
+  return await axios.get(`/queryIntranetIp?lan=${encodeURIComponent(String(lan))}`); // ignore_security_alert
 }
 
 export async function getLDTVersion() {

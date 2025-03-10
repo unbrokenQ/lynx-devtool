@@ -10,28 +10,28 @@ import os from 'node:os';
 import open from 'open';
 import path from 'path';
 import ping from 'ping';
-const fs = require('fs');
-const FormData = require('form-data');
 
 export async function startLDTPlatformProcess(url: string, ignoreLDTApp = false): Promise<boolean> {
-  let applescriptArgs = `"${encodeURI(url.split(/((?<![\/])[\/|\?](?![\/]))/)[0])}" "${encodeURI(url)}"`;
+  const baseUrl = encodeURI(url.split(/((?<![\/])[\/|\?](?![\/]))/)[0]);
+  const fullUrl = encodeURI(url);
+  
+  let args = [path.resolve(__dirname, '../static/openChrome.applescript'), baseUrl, fullUrl];
+  
   if (!ignoreLDTApp) {
-    // The entire url needs to be encoded here, so use encodeURIComponent
     const deeplinkUrl = `ldt-electron://cli/open?url=${encodeURIComponent(encodeURIComponent(url))}`;
     defaultLogger.info(`Try to open LDT App with deeplink: ${deeplinkUrl}`);
-    applescriptArgs += ` "${deeplinkUrl}"`;
+    args.push(deeplinkUrl);
   }
+  
   try {
-    execSync('ps cax | grep "Google Chrome"');
-    execSync(
-      // eslint-disable-next-line prefer-template
-      'osascript openChrome.applescript ' + applescriptArgs,
-      {
+    const chromeRunning = require('child_process').spawnSync('ps', ['cax'], { stdio: 'pipe' });
+    if (chromeRunning.status === 0 && chromeRunning.stdout.toString().includes('Google Chrome')) {
+      require('child_process').spawnSync('osascript', args, {
         cwd: path.resolve(__dirname, '../static'),
         stdio: 'ignore'
-      }
-    ); // ignore_security_alert
-    return true;
+      });
+      return true;
+    }
   } catch (err) {
     // TODO
     // Applescript seems to have some compatibility issues on macos 10.15, temporarily remove the error prompt
@@ -78,6 +78,9 @@ export const getIpAddress = async (vpnFirst = true) => {
 
 // Is it a lst service
 export const isLSTService = async (url: string) => {
+  if (!url.startsWith('http://localhost')) {
+    return false;
+  }
   try {
     const res = await axios.get(url); // ignore_security_alert
     if (res && res.status === 200 && res.data.code === 0) {
